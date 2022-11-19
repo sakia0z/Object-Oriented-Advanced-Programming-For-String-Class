@@ -49,6 +49,13 @@ inline String::~String()
 {
 	delete[] m_data;
 }
+
+//²Ù×÷·û << ÖØÔØ
+std::ostream& operator<<(std::ostream& os, const String& str)
+{
+	os << str.get_c_str();
+	return os;
+}
 #endif // !_MYSTRING_
 
 
